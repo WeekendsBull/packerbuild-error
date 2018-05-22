@@ -1,0 +1,272 @@
+{
+  "variables":
+    {
+      "version"                       : "{{ user `version` }}",
+      "iso_checksum"                  : "bbaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "aws_access_key"                : "{{env `PACKER_AWS_ACCESS_KEY`}}",
+      "aws_secret_key"                : "{{env `PACKER_AWS_SECRET_KEY`}}",
+      "root_pass"                     : "{{env `PACKER_ROOT_PASSWORD`}}",
+      "remote_esxi_username"          : "svc-packer",
+      "remote_esxi_password"          : "{{env `PACKER_SVC_PACKER_PASSWORD`}}",
+      "remote_esxi_datastore"         : "LAX-LAB-MGMT-HOST-CACHE-ONLY",
+      "vcenter_username"              : "{{env `PACKER_VCENTER_USERNAME`}}",
+      "vcenter_password"              : "{{env `PACKER_VCENTER_PASSWORD`}}",
+      "kms_key_id_int_us-west-1"          : "arn:aws:kms:us-west-1:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxx",
+      "kms_key_id_ext_us-west-1"          : "arn:aws:kms:us-west-1:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxx8",
+      "kms_key_id_ext_us-east-1"          : "arn:aws:kms:us-east-1:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxx",
+      "kms_key_id_ext_eu-west-2"          : "arn:aws:kms:eu-west-2:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxx",
+      "kms_key_id_ext_eu-central-1"       : "arn:aws:kms:eu-central-1:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxx",
+      "kms_key_id_ext_eu-west-3"          : "arn:aws:kms:eu-west-3:xxxxxxxxxxx:key/xxxxx-xxxx-xxxx-xxxx-xxxxxx"
+    },
+
+  "builders":[
+    {
+      "name"                 	: "aws",
+      "type"                 	: "amazon-ebs",
+      "access_key"           	: "{{user `aws_access_key`}}",
+      "secret_key"           	: "{{user `aws_secret_key`}}",
+      "region"               	: "{{user `aws_region`}}",
+      "instance_type"        	: "t2.xlarge",
+      "ssh_timeout"           : "10m",
+      "ssh_private_ip"        : true,
+      "ssh_username"          : "linuxadmin",
+      "subnet_id"            	: "{{user `aws_subnet_id`}}",
+      "ami_name"             	: "linux-centos7-v{{user `version`}}",
+      "ami_description"      	: "linux-CentOS 7 (Latest) - Build ({{timestamp}})",
+      "force_deregister"     	: true,
+      "tags": {
+        "OS": "CentOS 7.X",
+        "Type": "Latest",
+        "Version": "{{user `version`}}"
+      },
+      "ami_regions"           : [
+        "us-west-1"
+      ],
+      "source_ami_filter": {
+        "filters": {
+            "virtualization-type": "hvm",
+            "name": "linux-centos7-base",
+            "root-device-type": "ebs"
+          },
+          "owners": ["xxxxxxxxx"],
+          "most_recent": true
+      },
+      "ami_block_device_mappings" : [
+        {
+          "device_name": "/dev/sdf",
+          "delete_on_termination": true,
+          "encrypted": true,
+          "volume_size": 50,
+          "volume_type": "gp2"
+        }
+      ],
+      "encrypt_boot"  : true
+    },
+    {
+      "name"                 	: "aws-int",
+      "type"                 	: "amazon-ebs",
+      "access_key"           	: "{{user `aws_access_key`}}",
+      "secret_key"           	: "{{user `aws_secret_key`}}",
+      "region"               	: "{{user `aws_region`}}",
+      "instance_type"        	: "t2.xlarge",
+      "ssh_timeout"           : "10m",
+      "ssh_private_ip"        : true,
+      "ssh_username"          : "linuxadmin",
+      "subnet_id"            	: "{{user `aws_subnet_id`}}",
+      "ami_name"             	: "linux-centos7-v{{user `version`}}",
+      "ami_description"      	: "linux - CentOS 7 (Latest) - Build ({{timestamp}})",
+      "force_deregister"     	: true,
+      "kms_key_id"            : "{{user `kms_key_id_int_us-west-1`}}",
+      "region_kms_key_ids"    : {
+        "us-west-1": "{{user `kms_key_id_int_us-west-1`}}"
+      },
+      "tags": {
+        "OS": "CentOS 7.X",
+        "Type": "Latest",
+        "Version": "{{user `version`}}"
+      },
+      "ami_regions"           : [
+        "us-west-1"
+      ],
+      "source_ami_filter": {
+        "filters": {
+            "virtualization-type": "hvm",
+            "name": "linux-centos7-base",
+            "root-device-type": "ebs"
+          },
+          "owners": ["xxxxxxxxxx"],
+          "most_recent": true
+      },
+      "ami_block_device_mappings" : [
+        {
+          "device_name": "/dev/sdf",
+          "delete_on_termination": true,
+          "encrypted": true,
+          "volume_size": 50,
+          "volume_type": "gp2"
+        }
+      ],
+      "encrypt_boot"  : true
+    },
+    {
+      "name"                 	: "aws-ext",
+      "type"                 	: "amazon-ebs",
+      "access_key"           	: "{{user `aws_access_key`}}",
+      "secret_key"           	: "{{user `aws_secret_key`}}",
+      "region"               	: "{{user `aws_region`}}",
+      "instance_type"        	: "t2.xlarge",
+      "ssh_timeout"           : "10m",
+      "ssh_private_ip"        : true,
+      "ssh_username"          : "linuxadmin",
+      "subnet_id"            	: "{{user `aws_subnet_id`}}",
+      "ami_name"             	: "linux-centos7-v{{user `version`}}",
+      "ami_description"      	: "linux - CentOS 7 (Latest) - Build ({{timestamp}})",
+      "force_deregister"     	: true,
+      "kms_key_id"            : "{{user `kms_key_id_ext_us-west-1`}}",
+      "region_kms_key_ids"    : {
+        "us-west-1": "{{user `kms_key_id_ext_us-west-1`}}",
+        "us-east-1": "{{user `kms_key_id_ext_us-east-1`}}",
+        "eu-west-2": "{{user `kms_key_id_ext_eu-west-2`}}",
+        "eu-central-1": "{{user `kms_key_ext_id_eu-central-1`}}"
+      },
+      "tags": {
+        "OS": "CentOS 7.X",
+        "Type": "Latest",
+        "Version": "{{user `version`}}"
+      },
+      "ami_regions"           : [
+        "us-west-1",
+        "us-east-1",
+        "eu-west-2",
+        "eu-central-1"
+      ],
+      "source_ami_filter": {
+        "filters": {
+            "virtualization-type": "hvm",
+            "name": "linux-centos7-base",
+            "root-device-type": "ebs"
+          },
+          "owners": ["xxxxxxxxxxxx"],
+          "most_recent": true
+      },
+      "ami_block_device_mappings" : [
+        {
+          "device_name": "/dev/sdf",
+          "delete_on_termination": true,
+          "encrypted": true,
+          "volume_size": 50,
+          "volume_type": "gp2"
+        }
+      ],
+      "encrypt_boot"  : true
+    },
+    {
+      "name"                        : "vmware",
+      "vm_name"                     : "linux-centos7-v{{user `version`}}",
+      "type"                        : "vmware-iso",
+      "headless"                    : "false",
+      "iso_urls": [
+        "CentOS-7-x86_64-Minimal-1708.iso",
+        "http://mirrors.ocf.berkeley.edu/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso"
+      ],
+      "iso_checksum_type"           : "none",
+      "iso_checksum"                : "{{ user `iso_checksum` }}",
+      "communicator"                : "ssh",
+      "ssh_host"                    : "10.30.89.98",
+      "ssh_username"                : "root",
+      "ssh_password"                : "{{ user `root_pass` }}",
+      "vnc_port_min"                : "5900",
+      "vnc_port_max"                : "6000",
+      "vnc_disable_password"        : true,
+      "remote_type"                 : "esx5",
+      "remote_host"                 : "10.30.89.71",
+      "remote_username"             : "{{ user `remote_esxi_username` }}",
+      "remote_password"             : "{{ user `remote_esxi_password` }}",
+      "remote_datastore"            : "{{ user `remote_esxi_datastore` }}",
+      "format"                      : "ovf",
+      "ssh_port"                    : "22",
+      "ssh_timeout"                 : "15m",
+      "floppy_files": [
+        "./scripts/kickstart/ks.cfg"
+      ],
+      "boot_command": "<tab> inst.text inst.ks=hd:fd0:/ks.cfg <enter><wait>",
+      "guest_os_type"               : "centos-64",
+      "output_directory"            : "linux-centos7",
+      "disk_type_id"                : "thin",
+      "disk_size"                   : 66560,
+      "disk_additional_size"        : [51200],
+      "keep_registered"             : false,
+      "skip_export"                 : false,
+      "shutdown_command"            : "shutdown -P now",
+      "shutdown_timeout"            : "15m",
+      "vmdk_name"                   : "linux-centos7",
+      "tools_upload_flavor"         : "linux",
+      "version"                     : "11",
+      "vmx_data"                    : {
+        "numvcpus"                  : "12",
+        "memSize"                   : "8192",
+        "ethernet0.startConnected"  : "true",
+        "ethernet0.dvs.switchId"    : "xx xx xx xxx xxxx xxxxxxxxxxxxxxxxxxx",
+        "ethernet0.dvs.portgroupId" : "group-91",
+        "ethernet0.virtualdev"      : "e1000",
+        "annotation"                : "Built by Packer on epoch time {{timestamp}}"
+      },
+      "vmx_data_post"                    : {
+        "numvcpus"                  : "2",
+        "memSize"                   : "2048",
+        "ethernet0.virtualdev"      : "vmxnet3",
+        "vcpu.hotadd"               : "true",
+        "mem.hotadd"                : "true"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible-local",
+      "playbook_dir": "./scripts/",
+      "playbook_file": "./scripts/centos7.yaml"
+    },
+    {
+      "type": "ansible-local",
+      "only": ["aws","aws-int","aws-ext"],
+      "playbook_dir": "./scripts/",
+      "playbook_file": "./scripts/aws.yaml"
+    },
+    {
+      "type": "ansible-local",
+      "only": ["vmware"],
+      "playbook_dir": "./scripts/",
+      "playbook_file": "./scripts/users.yaml"
+    },
+    {
+      "type": "ansible",
+      "only": ["vmware"],
+      "playbook_file": "./scripts/network.yaml"
+    },
+    {
+      "type":  "shell",
+      "execute_command": "sudo {{ .Path }}",
+      "script": "./scripts/cleanup.sh"
+    }
+  ],
+
+  "post-processors":   [
+      {
+        "type": "vsphere",
+        "only": ["vmware"],
+        "host": "xxx-xxxxxxxxx.linuxmgmt.com",
+        "username": "{{ user `vcenter_username`}}",
+        "password": "{{ user `vcenter_password`}}",
+        "datacenter": "xxx",
+        "disk_mode": "thin",
+        "cluster": "xx-xx-xxxx",
+        "datastore": "xxx-xxxx-Templates",
+        "vm_name": "Production CentOS 7 (Beta)",
+        "vm_folder": "Production Templates",
+        "vm_network": "xxxx_linux_xxxx",
+        "overwrite": true,
+        "insecure": true
+      }
+       
+   ]
+}
