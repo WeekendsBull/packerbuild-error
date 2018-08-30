@@ -1,0 +1,1051 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red228\green233\blue232;\red29\green38\blue42;\red78\green106\blue120;
+\red136\green135\blue135;}
+{\*\expandedcolortbl;;\cssrgb\c91373\c92941\c92941;\cssrgb\c14902\c19608\c21961;\cssrgb\c37647\c49020\c54510;
+\cssrgb\c60392\c60000\c60000;}
+\margl1440\margr1440\vieww26420\viewh11560\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Started by user {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/user/jroh"}}{\fldrslt \cf4 \strokec4 John Roh}}\
+Replayed {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/job/Packer-Build-CentOS7/72/"}}{\fldrslt \cf4 \strokec4 #72}}\
+Running in Durability level: MAX_SURVIVABILITY\
+\cf5 \strokec5 [Pipeline] node\
+\cf2 \strokec2 Running on {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/computer/uw2-il2-jks001.csodcloud.corp/"}}{\fldrslt \cf4 \strokec4 uw2-il2-jks001.csodcloud.corp}} in /home/jenkins-slave/workspace/Packer-Build-CentOS7\
+\cf5 \strokec5 [Pipeline] \{\
+[Pipeline] stage\
+[Pipeline] \{ (Declarative: Checkout SCM)\
+[Pipeline] checkout\
+\cf2 \strokec2  > git rev-parse --is-inside-work-tree # timeout=10\
+Fetching changes from the remote Git repository\
+ > git config remote.origin.url ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git # timeout=10\
+Cleaning workspace\
+ > git rev-parse --verify HEAD # timeout=10\
+Resetting working tree\
+ > git reset --hard # timeout=10\
+ > git clean -fdx # timeout=10\
+Fetching upstream changes from ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git\
+ > git --version # timeout=10\
+using GIT_SSH to set credentials Bitbucket DevOps SSH Key\
+ > git fetch --tags --progress ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git +refs/heads/*:refs/remotes/origin/*\
+ > git rev-parse refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+ > git rev-parse refs/remotes/origin/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+Checking out Revision 1f39faa40c55d26c48c880938b1642aed4042ba9 (refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2)\
+ > git config core.sparsecheckout # timeout=10\
+ > git checkout -f 1f39faa40c55d26c48c880938b1642aed4042ba9\
+Commit message: "removed '"\
+ > git rev-list --no-walk 1f39faa40c55d26c48c880938b1642aed4042ba9 # timeout=10\
+\cf5 \strokec5 [Pipeline] \}\
+[Pipeline] // stage\
+[Pipeline] withEnv\
+[Pipeline] \{\
+[Pipeline] stage\
+[Pipeline] \{ (Build)\
+[Pipeline] parallel\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \{ (Branch: BETA: CentOS7-AWS-Dev)\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{ (Branch: BETA: CentOS7-AWS-Int)\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{ (Branch: BETA: CentOS7-AWS-Ext)\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{ (Branch: BETA: CentOS7-AWS-il2)\
+[Pipeline] [BETA: CentOS7-AWS-Dev] stage\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \{ (BETA: CentOS7-AWS-Dev)\
+[Pipeline] [BETA: CentOS7-AWS-Int] stage\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{ (BETA: CentOS7-AWS-Int)\
+[Pipeline] [BETA: CentOS7-AWS-Ext] stage\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{ (BETA: CentOS7-AWS-Ext)\
+[Pipeline] [BETA: CentOS7-AWS-il2] stage\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{ (BETA: CentOS7-AWS-il2)\
+[Pipeline] [BETA: CentOS7-AWS-Dev] node\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev] Running on {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/computer/uw1-dev-jks001.csodsandbox.corp/"}}{\fldrslt \cf4 \strokec4 uw1-dev-jks001.csodsandbox.corp}} in /home/jenkins-slave/workspace/Packer-Build-CentOS7\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Int] node\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Int] Running on {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/computer/uw1-int-jks001.csodsandbox.corp/"}}{\fldrslt \cf4 \strokec4 uw1-int-jks001.csodsandbox.corp}} in /home/jenkins-slave/workspace/Packer-Build-CentOS7\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Ext] node\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Ext] Running on {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/computer/uw1-ext-jks001.csodcloud.corp/"}}{\fldrslt \cf4 \strokec4 uw1-ext-jks001.csodcloud.corp}} in /home/jenkins-slave/workspace/Packer-Build-CentOS7\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-il2] node\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] Running on {\field{\*\fldinst{HYPERLINK "https://jenkins.csodmgmt.corp/computer/uw2-il2-jks001.csodcloud.corp/"}}{\fldrslt \cf4 \strokec4 uw2-il2-jks001.csodcloud.corp}} in /home/jenkins-slave/workspace/Packer-Build-CentOS7@2\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] \{\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{\
+[Pipeline] [BETA: CentOS7-AWS-Dev] checkout\
+[Pipeline] [BETA: CentOS7-AWS-Int] checkout\
+[Pipeline] [BETA: CentOS7-AWS-Ext] checkout\
+[Pipeline] [BETA: CentOS7-AWS-il2] checkout\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev]  > git rev-parse --is-inside-work-tree # timeout=10\
+[BETA: CentOS7-AWS-Dev] Fetching changes from the remote Git repository\
+[BETA: CentOS7-AWS-Dev]  > git config remote.origin.url ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git # timeout=10\
+[BETA: CentOS7-AWS-Dev] Cleaning workspace\
+[BETA: CentOS7-AWS-Dev]  > git rev-parse --verify HEAD # timeout=10\
+[BETA: CentOS7-AWS-Dev] Resetting working tree\
+[BETA: CentOS7-AWS-Dev]  > git reset --hard # timeout=10\
+[BETA: CentOS7-AWS-Dev]  > git clean -fdx # timeout=10\
+[BETA: CentOS7-AWS-Dev] Fetching upstream changes from ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git\
+[BETA: CentOS7-AWS-Dev]  > git --version # timeout=10\
+[BETA: CentOS7-AWS-Dev] using GIT_SSH to set credentials Bitbucket DevOps SSH Key\
+[BETA: CentOS7-AWS-Dev]  > git fetch --tags --progress ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git +refs/heads/*:refs/remotes/origin/*\
+[BETA: CentOS7-AWS-Dev]  > git rev-parse refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Dev]  > git rev-parse refs/remotes/origin/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Dev] Checking out Revision 1f39faa40c55d26c48c880938b1642aed4042ba9 (refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2)\
+[BETA: CentOS7-AWS-Dev]  > git config core.sparsecheckout # timeout=10\
+[BETA: CentOS7-AWS-Dev]  > git checkout -f 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-Dev] Commit message: "removed '"\
+[BETA: CentOS7-AWS-Int]  > git rev-parse --is-inside-work-tree # timeout=10\
+[BETA: CentOS7-AWS-Int] Fetching changes from the remote Git repository\
+[BETA: CentOS7-AWS-Int]  > git config remote.origin.url ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git # timeout=10\
+[BETA: CentOS7-AWS-Int] Cleaning workspace\
+[BETA: CentOS7-AWS-Int]  > git rev-parse --verify HEAD # timeout=10\
+[BETA: CentOS7-AWS-Int] Resetting working tree\
+[BETA: CentOS7-AWS-Int]  > git reset --hard # timeout=10\
+[BETA: CentOS7-AWS-Int]  > git clean -fdx # timeout=10\
+[BETA: CentOS7-AWS-Int] Fetching upstream changes from ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git\
+[BETA: CentOS7-AWS-Int]  > git --version # timeout=10\
+[BETA: CentOS7-AWS-Int] using GIT_SSH to set credentials Bitbucket DevOps SSH Key\
+[BETA: CentOS7-AWS-Int]  > git fetch --tags --progress ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git +refs/heads/*:refs/remotes/origin/*\
+[BETA: CentOS7-AWS-Int]  > git rev-parse refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Int]  > git rev-parse refs/remotes/origin/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Int] Checking out Revision 1f39faa40c55d26c48c880938b1642aed4042ba9 (refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2)\
+[BETA: CentOS7-AWS-Int]  > git config core.sparsecheckout # timeout=10\
+[BETA: CentOS7-AWS-Ext]  > git rev-parse --is-inside-work-tree # timeout=10\
+[BETA: CentOS7-AWS-Ext] Fetching changes from the remote Git repository\
+[BETA: CentOS7-AWS-Ext]  > git config remote.origin.url ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git # timeout=10\
+[BETA: CentOS7-AWS-Ext] Cleaning workspace\
+[BETA: CentOS7-AWS-Ext]  > git rev-parse --verify HEAD # timeout=10\
+[BETA: CentOS7-AWS-Ext] Resetting working tree\
+[BETA: CentOS7-AWS-Ext]  > git reset --hard # timeout=10\
+[BETA: CentOS7-AWS-Ext]  > git clean -fdx # timeout=10\
+[BETA: CentOS7-AWS-Ext] Fetching upstream changes from ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git\
+[BETA: CentOS7-AWS-Ext]  > git --version # timeout=10\
+[BETA: CentOS7-AWS-Ext] using GIT_SSH to set credentials Bitbucket DevOps SSH Key\
+[BETA: CentOS7-AWS-Ext]  > git fetch --tags --progress ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git +refs/heads/*:refs/remotes/origin/*\
+[BETA: CentOS7-AWS-Ext]  > git rev-parse refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Ext]  > git rev-parse refs/remotes/origin/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Ext] Checking out Revision 1f39faa40c55d26c48c880938b1642aed4042ba9 (refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2)\
+[BETA: CentOS7-AWS-il2]  > git rev-parse --is-inside-work-tree # timeout=10\
+[BETA: CentOS7-AWS-il2] Fetching changes from the remote Git repository\
+[BETA: CentOS7-AWS-il2]  > git config remote.origin.url ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git # timeout=10\
+[BETA: CentOS7-AWS-il2] Cleaning workspace\
+[BETA: CentOS7-AWS-il2]  > git rev-parse --verify HEAD # timeout=10\
+[BETA: CentOS7-AWS-il2] Resetting working tree\
+[BETA: CentOS7-AWS-il2]  > git reset --hard # timeout=10\
+[BETA: CentOS7-AWS-il2]  > git clean -fdx # timeout=10\
+[BETA: CentOS7-AWS-il2] Fetching upstream changes from ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git\
+[BETA: CentOS7-AWS-il2]  > git --version # timeout=10\
+[BETA: CentOS7-AWS-il2] using GIT_SSH to set credentials Bitbucket DevOps SSH Key\
+[BETA: CentOS7-AWS-il2]  > git fetch --tags --progress ssh://git@lax-prod-bit01.csodmgmt.corp:7999/se/packer.git +refs/heads/*:refs/remotes/origin/*\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] withEnv\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Int]  > git checkout -f 1f39faa40c55d26c48c880938b1642aed4042ba9\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] \{\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Int] Commit message: "removed '"\
+[BETA: CentOS7-AWS-Ext]  > git config core.sparsecheckout # timeout=10\
+[BETA: CentOS7-AWS-Ext]  > git checkout -f 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-Ext] Commit message: "removed '"\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Int] withEnv\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{\
+[Pipeline] [BETA: CentOS7-AWS-Ext] withEnv\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{\
+[Pipeline] [BETA: CentOS7-AWS-Dev] script\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \{\
+[Pipeline] [BETA: CentOS7-AWS-Dev] notifyBitbucket\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev] Notifying Stash at "{\field{\*\fldinst{HYPERLINK "https://bitbucket.csod.com/"}}{\fldrslt \cf4 \strokec4 bitbuckt_xxxxxx.com}}"\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Int] script\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{\
+[Pipeline] [BETA: CentOS7-AWS-Ext] script\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{\
+[Pipeline] [BETA: CentOS7-AWS-Int] notifyBitbucket\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Int] Notifying Stash at "{\field{\*\fldinst{HYPERLINK "https://bitbucket.csod.com/"}}{\fldrslt \cf4 \strokec4 bitbuckt_xxxxxx.com}}"\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Ext] notifyBitbucket\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2]  > git rev-parse refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-Ext] Notifying Stash at "{\field{\*\fldinst{HYPERLINK "https://bitbucket.csod.com/"}}{\fldrslt \cf4 \strokec4 bitbuckt_xxxxxx.com}}"\
+[BETA: CentOS7-AWS-il2]  > git rev-parse refs/remotes/origin/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2^\{commit\} # timeout=10\
+[BETA: CentOS7-AWS-il2] Checking out Revision 1f39faa40c55d26c48c880938b1642aed4042ba9 (refs/remotes/origin/CEDO-147-deploy-jenkins-slave-to-il2-us-west-2)\
+[BETA: CentOS7-AWS-il2]  > git config core.sparsecheckout # timeout=10\
+[BETA: CentOS7-AWS-il2]  > git checkout -f 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-il2] Commit message: "removed '"\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-il2] withEnv\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{\
+[Pipeline] [BETA: CentOS7-AWS-il2] script\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{\
+[Pipeline] [BETA: CentOS7-AWS-il2] notifyBitbucket\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Ext] Notified Stash for commit with id 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-il2] Notifying Stash at "{\field{\*\fldinst{HYPERLINK "https://bitbucket.csod.com/"}}{\fldrslt \cf4 \strokec4 bitbuckt_xxxxxx.com}}"\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev] Notified Stash for commit with id 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-Int] Notified Stash for commit with id 1f39faa40c55d26c48c880938b1642aed4042ba9\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Ext] // script\
+[Pipeline] [BETA: CentOS7-AWS-Ext] withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \{\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+[Pipeline] [BETA: CentOS7-AWS-Int] \}\
+[Pipeline] [BETA: CentOS7-AWS-Ext] sh\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Ext] [Packer-Build-CentOS7] Running shell script\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] // script\
+[Pipeline] [BETA: CentOS7-AWS-Int] // script\
+[Pipeline] [BETA: CentOS7-AWS-Dev] withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \{\
+[Pipeline] [BETA: CentOS7-AWS-Int] withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Int] \{\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] Notified Stash for commit with id 1f39faa40c55d26c48c880938b1642aed4042ba9\
+[BETA: CentOS7-AWS-Ext] Template validated successfully.\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] sh\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev] [Packer-Build-CentOS7] Running shell script\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Int] sh\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Int] [Packer-Build-CentOS7] Running shell script\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-il2] \}\
+[Pipeline] [BETA: CentOS7-AWS-il2] // script\
+[Pipeline] [BETA: CentOS7-AWS-il2] withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-il2] \{\
+\cf2 \strokec2 [BETA: CentOS7-AWS-Dev] Template validated successfully.\
+[BETA: CentOS7-AWS-Int] Template validated successfully.\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-il2] sh\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] [Packer-Build-CentOS7@2] Running shell script\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+[Pipeline] [BETA: CentOS7-AWS-Ext] // withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+[Pipeline] [BETA: CentOS7-AWS-Ext] // withEnv\
+[Pipeline] [BETA: CentOS7-AWS-Dev] // withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+[Pipeline] [BETA: CentOS7-AWS-Ext] // node\
+[Pipeline] [BETA: CentOS7-AWS-Dev] // withEnv\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+[Pipeline] [BETA: CentOS7-AWS-Int] \}\
+[Pipeline] [BETA: CentOS7-AWS-Ext] // stage\
+[Pipeline] [BETA: CentOS7-AWS-Dev] // node\
+[Pipeline] [BETA: CentOS7-AWS-Int] // withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-Ext] \}\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for file\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vmware-iso\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vmware-vmx\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for cloudstack\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-ebssurrogate\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-ebsvolume\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for azure-arm\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for hyperv-vmcx\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for openstack\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for oracle-classic\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for parallels-pvm\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for alicloud-ecs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for scaleway\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for triton\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for profitbricks\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for hyperv-iso\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for virtualbox-ovf\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-instance\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for googlecompute\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for lxc\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for qemu\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for digitalocean\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for lxd\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for ncloud\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for parallels-iso\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-ebs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for null\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for oracle-oci\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for virtualbox-iso\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for docker\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for oneandone\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-chroot\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for chef-client\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for chef-solo\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for file\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for puppet-masterless\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for windows-restart\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for ansible\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for salt-masterless\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for windows-shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for ansible-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for converge\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for powershell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for puppet-server\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for shell-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vsphere\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for alicloud-import\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vagrant\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for shell-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for artifice\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for googlecompute-export\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for manifest\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vagrant-cloud\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for checksum\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for docker-save\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for compress\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for docker-import\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for docker-push\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for docker-tag\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for vsphere-template\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for amazon-import\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Using internal plugin for atlas\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Int] \}\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[cloudstack:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack amazon-ebsvolume:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume hyperv-vmcx:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx triton:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton lxc:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc qemu:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu virtualbox-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso openstack:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack parallels-pvm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm scaleway:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway virtualbox-ovf:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf googlecompute:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute file:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file parallels-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso vmware-vmx:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx alicloud-ecs:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs oracle-classic:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic profitbricks:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks digitalocean:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean amazon-ebs:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs oracle-oci:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci vmware-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso hyperv-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso lxd:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd null:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null amazon-ebssurrogate:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate azure-arm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm ncloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud docker:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker amazon-instance:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance oneandone:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone amazon-chroot:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot] PostProcessors:map[vagrant-cloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud docker-save:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save vsphere-template:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template vsphere:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere alicloud-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import artifice:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice atlas:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-atlas googlecompute-export:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export checksum:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum docker-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import shell-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local amazon-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import docker-push:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push docker-tag:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag vagrant:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant manifest:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest compress:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress] Provisioners:map[shell-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local ansible-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local puppet-server:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server chef-client:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client chef-solo:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo file:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file ansible:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible salt-masterless:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless converge:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge powershell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell shell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell puppet-masterless:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless windows-restart:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart windows-shell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Loading builder: amazon-ebs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Plugin could not be found. Checking same directory as executable.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Current exe path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Creating plugin client for path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting plugin: /usr/bin/packer []string\{"/usr/bin/packer", "plugin", "packer-builder-amazon-ebs"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting for RPC address for: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 args: []string\{"packer-builder-amazon-ebs"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin minimum port: 10000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin maximum port: 25000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin address: unix /tmp/packer-plugin501156819\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Waiting for connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Serving a plugin connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Loading provisioner: shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Plugin could not be found. Checking same directory as executable.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Current exe path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Creating plugin client for path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting plugin: /usr/bin/packer []string\{"/usr/bin/packer", "plugin", "packer-provisioner-shell"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting for RPC address for: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 args: []string\{"packer-provisioner-shell"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin minimum port: 10000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin maximum port: 25000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin address: unix /tmp/packer-plugin261201005\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Waiting for connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Serving a plugin connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Loading provisioner: ansible-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Plugin could not be found. Checking same directory as executable.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Current exe path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Creating plugin client for path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting plugin: /usr/bin/packer []string\{"/usr/bin/packer", "plugin", "packer-provisioner-ansible-local"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting for RPC address for: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 args: []string\{"packer-provisioner-ansible-local"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin minimum port: 10000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin maximum port: 25000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin address: unix /tmp/packer-plugin634711061\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Waiting for connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Serving a plugin connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Loading provisioner: ansible-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Plugin could not be found. Checking same directory as executable.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Current exe path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Creating plugin client for path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting plugin: /usr/bin/packer []string\{"/usr/bin/packer", "plugin", "packer-provisioner-ansible-local"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting for RPC address for: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 args: []string\{"packer-provisioner-ansible-local"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin minimum port: 10000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin maximum port: 25000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin address: unix /tmp/packer-plugin492057747\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Waiting for connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Loading provisioner: shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Plugin could not be found. Checking same directory as executable.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Current exe path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Creating plugin client for path: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting plugin: /usr/bin/packer []string\{"/usr/bin/packer", "plugin", "packer-provisioner-shell"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Serving a plugin connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting for RPC address for: /usr/bin/packer\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Packer version: 1.2.3\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer Target OS/Arch: linux amd64\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Built with Go Version: go1.10.1\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Attempting to open config file: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [WARN] Config file doesn't exist: /home/jenkins-slave/.packerconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Packer config: &\{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Setting cache directory: /home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/packer_cache\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 args: []string\{"packer-provisioner-shell"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin minimum port: 10000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin maximum port: 25000\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Detected home directory from env var: /home/jenkins-slave\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Plugin address: unix /tmp/packer-plugin514223502\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Waiting for connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Serving a plugin connection...\
+[BETA: CentOS7-AWS-il2] [1;32maws-ext-il2 output will be in this color.[0m\
+[BETA: CentOS7-AWS-il2] \
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 ui: [1;32maws-ext-il2 output will be in this color.[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 ui: \
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Build debug mode: false\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Force build: false\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 On error: \
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Preparing build: aws-ext-il2\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Cannot copy AMI to AWS session region 'us-west-2', deleting it from `ami_regions`.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Config: \{PackerConfig:\{PackerBuildName:aws-ext-il2 PackerBuilderType:amazon-ebs PackerDebug:false PackerForce:false PackerOnError: PackerUserVars:map[aws_secret_key: kms_key_id_ext_eu-central-1:arn:aws:kms:eu-central-1:249708023239:key/585dd9a9-6977-45d1-af19-2b6f757ef496 kms_key_id_ext_il2_us-west-2:arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044 kms_key_id_ext_us-west-1:arn:aws:kms:us-west-1:249708023239:key/ca0863bb-c06f-4402-87c9-e6e80cca2268 iso_checksum:bba314624956961a2ea31dd460cd860a77911c1e0a56e4820a12b9c5dad363f5 kms_key_id_ext_eu-west-2:arn:aws:kms:eu-west-2:249708023239:key/b8caa8ae-1ae3-4e5d-8b45-d8625a3c347c remote_esxi_password: vcenter_username: remote_esxi_datastore:LAX-LAB-MGMT-HOST-CACHE-ONLY kms_key_id_int_us-west-1:arn:aws:kms:us-west-1:437677490818:key/c91bb326-af95-4618-af51-d7d978917a04 aws_region:us-west-2 aws_subnet_id:subnet-0ff9fd56b07f7c911 root_pass: kms_key_id_ext_eu-west-3:arn:aws:kms:eu-west-3:249708023239:key/298fdb9d-897f-4cf1-9c42-35ab619af87d kms_key_id_ext_us-east-1:arn:aws:kms:us-east-1:249708023239:key/bbd89744-ab0c-457c-90d4-10fb6af7c136 remote_esxi_username:svc-packer vcenter_password: aws_access_key: version:2.2.73-test kms_key_id_ext_il2_us-east-1:arn:aws:kms:us-east-1:882016564815:key/7236d748-1696-42ef-80f7-c83f0401d94a]\} AccessConfig:\{AccessKey: CustomEndpointEc2: MFACode: ProfileName: RawRegion:us-west-2 SecretKey: SkipValidation:true SkipMetadataApiCheck:false Token: session:<nil>\} AMIConfig:\{AMIName:csod-centos7-v2.2.73-test AMIDescription:CSOD - CentOS 7 (Latest) - Build (\{\{timestamp\}\}) AMIVirtType: AMIUsers:[] AMIGroups:[] AMIProductCodes:[] AMIRegions:[us-east-1] AMISkipRegionValidation:true AMITags:map[OS:CentOS 7.X Type:Latest Version:\{\{user `version`\}\} Application:TECHOPS_INFRASTRUCTURE Environment:INFRASTRUCTURE CSOD_APP:TECHOPS_INFRASTRUCTURE APP_DOMAIN:INFRASTRUCTURE] AMIENASupport:false AMISriovNetSupport:false AMIForceDeregister:false AMIForceDeleteSnapshot:false AMIEncryptBootVolume:true AMIKmsKeyId:arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044 AMIRegionKMSKeyIDs:map[us-west-2:arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044 us-east-1:arn:aws:kms:us-east-1:882016564815:key/7236d748-1696-42ef-80f7-c83f0401d94a] SnapshotTags:map[] SnapshotUsers:[] SnapshotGroups:[]\} BlockDevices:\{AMIBlockDevices:\{AMIMappings:[\{DeleteOnTermination:true DeviceName:/dev/sdf Encrypted:true IOPS:0 NoDevice:false SnapshotId: VirtualName: VolumeType:gp2 VolumeSize:50 KmsKeyId:\}]\} LaunchBlockDevices:\{LaunchMappings:[]\}\} RunConfig:\{AssociatePublicIpAddress:false AvailabilityZone: EbsOptimized:false IamInstanceProfile: InstanceType:t2.xlarge RunTags:map[] SourceAmi: SourceAmiFilter:\{Filters:map[0xc4201a1d10:0xc4201a1d30 0xc4201a1d50:0xc4201a1d70 0xc4201a1d90:0xc4201a1db0] Owners:[0xc4201a1e30] MostRecent:true\} SpotPrice: SpotPriceAutoProduct: DisableStopInstance:false SecurityGroupId: SecurityGroupIds:[] TemporarySGSourceCidr:0.0.0.0/0 SubnetId:subnet-0ff9fd56b07f7c911 TemporaryKeyPairName:packer_5b87004d-c938-a10d-512f-9309641f2170 UserData: UserDataFile: WindowsPasswordTimeout:20m0s VpcId: InstanceInitiatedShutdownBehavior:stop Comm:\{Type:ssh SSHHost: SSHPort:22 SSHUsername:csodadmin SSHPassword: SSHPrivateKey: SSHPty:false SSHTimeout:2h46m40s SSHAgentAuth:false SSHDisableAgentForwarding:false SSHHandshakeAttempts:10 SSHBastionHost: SSHBastionPort:0 SSHBastionAgentAuth:false SSHBastionUsername: SSHBastionPassword: SSHBastionPrivateKey: SSHFileTransferMethod:scp SSHProxyHost: SSHProxyPort:0 SSHProxyUsername: SSHProxyPassword: SSHKeepAliveInterval:5s SSHReadWriteTimeout:0s WinRMUser: WinRMPassword: WinRMHost: WinRMPort:0 WinRMTimeout:0s WinRMUseSSL:false WinRMInsecure:false WinRMUseNTLM:false WinRMTransportDecorator:<nil>\} SSHKeyPairName: SSHInterface:\} VolumeRunTags:map[] ctx:\{Data:<nil> Funcs:map[clean_ami_name:0xc3a300] UserVariables:map[remote_esxi_datastore:LAX-LAB-MGMT-HOST-CACHE-ONLY kms_key_id_ext_eu-central-1:arn:aws:kms:eu-central-1:249708023239:key/585dd9a9-6977-45d1-af19-2b6f757ef496 root_pass: kms_key_id_int_us-west-1:arn:aws:kms:us-west-1:437677490818:key/c91bb326-af95-4618-af51-d7d978917a04 kms_key_id_ext_eu-west-3:arn:aws:kms:eu-west-3:249708023239:key/298fdb9d-897f-4cf1-9c42-35ab619af87d kms_key_id_ext_il2_us-east-1:arn:aws:kms:us-east-1:882016564815:key/7236d748-1696-42ef-80f7-c83f0401d94a vcenter_password: aws_subnet_id:subnet-0ff9fd56b07f7c911 iso_checksum:bba314624956961a2ea31dd460cd860a77911c1e0a56e4820a12b9c5dad363f5 aws_secret_key: remote_esxi_password: remote_esxi_username:svc-packer vcenter_username: version:2.2.73-test aws_access_key: kms_key_id_ext_us-east-1:arn:aws:kms:us-east-1:249708023239:key/bbd89744-ab0c-457c-90d4-10fb6af7c136 aws_region:us-west-2 kms_key_id_ext_eu-west-2:arn:aws:kms:eu-west-2:249708023239:key/b8caa8ae-1ae3-4e5d-8b45-d8625a3c347c kms_key_id_ext_il2_us-west-2:arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044 kms_key_id_ext_us-west-1:arn:aws:kms:us-west-1:249708023239:key/ca0863bb-c06f-4402-87c9-e6e80cca2268] EnableEnv:false BuildName:aws-ext-il2 BuildType:amazon-ebs TemplatePath:/home/jenkins-slave/workspace/Packer-Build-CentOS7@2/packer/centos/centos7.json\}\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Waiting on builds to complete...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Starting build run: aws-ext-il2\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 Running builder: amazon-ebs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 [INFO] (telemetry) Starting builder amazon-ebs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 Found region us-west-2\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] AWS Auth provider used: "EC2RoleProvider"\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] Finding AZ and VpcId for the given subnet 'subnet-0ff9fd56b07f7c911'\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Prevalidating AMI Name: csod-centos7-v2.2.73-test[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 ui: [1;32m==> aws-ext-il2: Prevalidating AMI Name: csod-centos7-v2.2.73-test[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] AvailabilityZone found: 'us-west-2a'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:33 packer: 2018/08/29 13:21:33 [INFO] VpcId found: 'vpc-09f5ed04f3a8d1821'\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-Dev] // stage\
+[Pipeline] [BETA: CentOS7-AWS-Int] // withEnv\
+[Pipeline] [BETA: CentOS7-AWS-Dev] \}\
+[Pipeline] [BETA: CentOS7-AWS-Int] \}\
+[Pipeline] [BETA: CentOS7-AWS-Int] // node\
+[Pipeline] [BETA: CentOS7-AWS-Int] \}\
+[Pipeline] [BETA: CentOS7-AWS-Int] // stage\
+[Pipeline] [BETA: CentOS7-AWS-Int] \}\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer: 2018/08/29 13:21:34 Using AMI Filters \{\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:   Filters: [\{\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Name: "root-device-type",\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Values: ["ebs"]\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:     \},\{\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Name: "virtualization-type",\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Values: ["hvm"]\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:     \},\{\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Name: "name",\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:       Values: ["csod-centos7-base-v1.01"]\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:     \}],\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer:   Owners: ["224674095445"]\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer: \}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [0;32m    aws-ext-il2: Found Image ID: ami-0888d570[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [1;32m==> aws-ext-il2: Creating temporary keypair: packer_5b87004d-c938-a10d-512f-9309641f2170[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Found Image ID: ami-0888d570[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Creating temporary keypair: packer_5b87004d-c938-a10d-512f-9309641f2170[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Creating temporary security group for this instance: packer_5b87004e-85ce-ca9b-fa17-a274ac50a9da[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [1;32m==> aws-ext-il2: Creating temporary security group for this instance: packer_5b87004e-85ce-ca9b-fa17-a274ac50a9da[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Authorizing access to port 22 from 0.0.0.0/0 in the temporary security group...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [1;32m==> aws-ext-il2: Authorizing access to port 22 from 0.0.0.0/0 in the temporary security group...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer: 2018/08/29 13:21:34 [DEBUG] Waiting for temporary security group: sg-03caf815c67feeba8\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 packer: 2018/08/29 13:21:34 [DEBUG] Found security group sg-03caf815c67feeba8\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [1;32m==> aws-ext-il2: Launching a source AWS instance...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Launching a source AWS instance...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Adding tags to source instance[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [1;32m==> aws-ext-il2: Adding tags to source instance[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:34 ui: [0;32m    aws-ext-il2: Adding tag: "Name": "Packer Builder"[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Adding tag: "Name": "Packer Builder"[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:35 ui: [0;32m    aws-ext-il2: Instance ID: i-0ae3c9190a9263f7b[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Instance ID: i-0ae3c9190a9263f7b[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Waiting for instance (i-0ae3c9190a9263f7b) to become ready...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:35 ui: [1;32m==> aws-ext-il2: Waiting for instance (i-0ae3c9190a9263f7b) to become ready...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:51 packer: 2018/08/29 13:21:51 [INFO] Not using winrm communicator, skipping get password...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:51 packer: 2018/08/29 13:21:51 [INFO] Waiting for SSH, up to timeout: 2h46m40s\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Waiting for SSH to become available...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:21:51 ui: [1;32m==> aws-ext-il2: Waiting for SSH to become available...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:22:06 packer: 2018/08/29 13:22:06 [DEBUG] TCP connection to SSH ip/port failed: dial tcp 10.176.252.162:22: i/o timeout\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:22:26 packer: 2018/08/29 13:22:26 [DEBUG] TCP connection to SSH ip/port failed: dial tcp 10.176.252.162:22: i/o timeout\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:22:46 packer: 2018/08/29 13:22:46 [DEBUG] TCP connection to SSH ip/port failed: dial tcp 10.176.252.162:22: i/o timeout\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:22:58 packer: 2018/08/29 13:22:58 [DEBUG] TCP connection to SSH ip/port failed: dial tcp 10.176.252.162:22: connect: connection refused\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [INFO] Attempting SSH connection...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] reconnecting to TCP connection for SSH\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] handshaking with SSH\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] handshake complete!\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [INFO] no local agent socket, will not connect agent\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 ui: [1;32m==> aws-ext-il2: Connected to SSH![0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Connected to SSH![0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 Running the provision hook\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 [INFO] (telemetry) Starting provisioner shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 ui: [1;32m==> aws-ext-il2: Provisioning with shell script: /tmp/packer-shell120412904[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Provisioning with shell script: /tmp/packer-shell120412904[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 Opening /tmp/packer-shell120412904 for reading\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [INFO] 199 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 [INFO] 199 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] Starting remote scp process:  scp -vt /tmp\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:03 packer: 2018/08/29 13:23:03 [DEBUG] scp: Uploading script_3209.sh: perms=C0600 size=199\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp stderr (length 31): Sink: C0600 199 script_3209.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] starting remote command: chmod 0755 /tmp/script_3209.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] starting remote command: chmod +x /tmp/script_3209.sh; PACKER_BUILDER_TYPE='amazon-ebs' PACKER_BUILD_NAME='aws-ext-il2'  /tmp/script_3209.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 32 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: 30[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: 30[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 32 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: 3000[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: 3000[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: 2660AWS_TIMEOUT_SECONDS[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: 2660AWS_TIMEOUT_SECONDS[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] starting remote command: rm -f /tmp/script_3209.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] (telemetry) ending shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] (telemetry) Starting provisioner ansible-local\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Provisioning with Ansible...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [1;32m==> aws-ext-il2: Provisioning with Ansible...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading Playbook directory to Ansible staging directory...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: Uploading Playbook directory to Ansible staging directory...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: Creating directory: /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Creating directory: /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] starting remote command: mkdir -p '/tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Upload dir './scripts/' to '/tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Starting remote scp process:  scp -rvt /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading aws-cfn-bootstrap.sh: perms=C0644 size=800\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading aws.yaml: perms=C0644 size=1202\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading base.yaml: perms=C0644 size=524\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading centos7.yaml: perms=C0644 size=596\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading cleanup.sh: perms=C0644 size=884\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP: starting directory upload: kickstart\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading ks.cfg: perms=C0644 size=1991\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading network.yaml: perms=C0644 size=347\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP: starting directory upload: sysconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading ifcfg-ens160: perms=C0644 size=88\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading users.yaml: perms=C0644 size=715\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp stderr (length 317): Sink: C0644 800 aws-cfn-bootstrap.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 1202 aws.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 524 base.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 596 centos7.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 884 cleanup.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: D0755 0 kickstart\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 1991 ks.cfg\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: E\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 347 network.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: D0755 0 sysconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 88 ifcfg-ens160\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: E\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: Sink: C0644 715 users.yaml\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading main Playbook file...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: Uploading main Playbook file...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 596 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 596 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Starting remote scp process:  scp -vt /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Copying input data into temporary file so we can read the length\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading centos7.yaml: perms=C0644 size=596\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp stderr (length 29): Sink: C0644 596 centos7.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: Uploading inventory file...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading inventory file...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [INFO] 9 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 [INFO] 9 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Starting remote scp process:  scp -vt /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Copying input data into temporary file so we can read the length\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp: Uploading packer-provisioner-ansible-local876377200: perms=C0644 size=9\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] scp stderr (length 56): Sink: C0644 9 packer-provisioner-ansible-local876377200\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 ui: [0;32m    aws-ext-il2: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/centos7.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/packer-provisioner-ansible-local876377200[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/centos7.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/packer-provisioner-ansible-local876377200[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:04 packer: 2018/08/29 13:23:04 [DEBUG] starting remote command: cd /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/centos7.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-4ab7-5256-c1b6-d0a847a1e11d/packer-provisioner-ansible-local876377200\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:10 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: PLAY [Packer Provisoner for csod-centos7 images] *******************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:10 ui: [0;32m    aws-ext-il2: PLAY [Packer Provisoner for csod-centos7 images] *******************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:11 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Install epel-release] ****************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:23:11 ui: [0;32m    aws-ext-il2: TASK [Install epel-release] ****************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:25 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:25 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:25 ui: [0;32m    aws-ext-il2: TASK [Install yum-priorities] **************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Install yum-priorities] **************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:29 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:29 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Disable selinux] *********************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:29 ui: [0;32m    aws-ext-il2: TASK [Disable selinux] *********************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:30 ui: [0;32m    aws-ext-il2: [0;32mok: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;32mok: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:30 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:24:30 ui: [0;32m    aws-ext-il2: TASK [Install CSOD Standard Base Utilities] ************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Install CSOD Standard Base Utilities] ************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:22 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'yum-utils', u'vim-enhanced', u'telnet', u'net-tools', u'traceroute', u'iotop', u'system-storage-manager', u'sysstat', u'atop', u'htop', u'iptraf-ng', u'mtr', u'wget', u'nfs-utils', u'bind-utils', u'nc', u'dbus', u'nmap', u'aide'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'yum-utils', u'vim-enhanced', u'telnet', u'net-tools', u'traceroute', u'iotop', u'system-storage-manager', u'sysstat', u'atop', u'htop', u'iptraf-ng', u'mtr', u'wget', u'nfs-utils', u'bind-utils', u'nc', u'dbus', u'nmap', u'aide'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:22 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Uninstall Non-Standard Packages] *****************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:22 ui: [0;32m    aws-ext-il2: TASK [Uninstall Non-Standard Packages] *****************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:24 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'firewalld'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'firewalld'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:24 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:25:24 ui: [0;32m    aws-ext-il2: TASK [Run aide-init] ***********************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Run aide-init] ***********************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:29:22 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:29:22 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Update all Yum Packages] *************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:29:22 ui: [0;32m    aws-ext-il2: TASK [Update all Yum Packages] *************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: PLAY RECAP *********************************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: PLAY RECAP *********************************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: [0;33m127.0.0.1[0m                  : [0;32mok=7   [0m [0;33mchanged=6   [0m unreachable=0    failed=0[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33m127.0.0.1[0m                  : [0;32mok=7   [0m [0;33mchanged=6   [0m unreachable=0    failed=0[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] 1338 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] 1338 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] (telemetry) ending ansible-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] (telemetry) Starting provisioner ansible-local\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Provisioning with Ansible...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [1;32m==> aws-ext-il2: Provisioning with Ansible...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading Playbook directory to Ansible staging directory...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: Uploading Playbook directory to Ansible staging directory...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Creating directory: /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: Creating directory: /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] starting remote command: mkdir -p '/tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] 0 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Upload dir './scripts/' to '/tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Starting remote scp process:  scp -rvt /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading aws-cfn-bootstrap.sh: perms=C0644 size=800\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading aws.yaml: perms=C0644 size=1202\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading base.yaml: perms=C0644 size=524\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading centos7.yaml: perms=C0644 size=596\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading cleanup.sh: perms=C0644 size=884\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] SCP: starting directory upload: kickstart\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading ks.cfg: perms=C0644 size=1991\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading network.yaml: perms=C0644 size=347\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] SCP: starting directory upload: sysconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading ifcfg-ens160: perms=C0644 size=88\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading users.yaml: perms=C0644 size=715\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp stderr (length 317): Sink: C0644 800 aws-cfn-bootstrap.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 1202 aws.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 524 base.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 596 centos7.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 884 cleanup.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: D0755 0 kickstart\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 1991 ks.cfg\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: E\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 347 network.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: D0755 0 sysconfig\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 88 ifcfg-ens160\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: E\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: Sink: C0644 715 users.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 ui: [0;32m    aws-ext-il2: Uploading main Playbook file...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading main Playbook file...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [INFO] 1202 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 [INFO] 1202 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Starting remote scp process:  scp -vt /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] Copying input data into temporary file so we can read the length\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:14 packer: 2018/08/29 13:34:14 [DEBUG] scp: Uploading aws.yaml: perms=C0644 size=1202\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] scp stderr (length 26): Sink: C0644 1202 aws.yaml\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2: Uploading inventory file...[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Uploading inventory file...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [INFO] 9 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 [INFO] 9 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Starting remote scp process:  scp -vt /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Copying input data into temporary file so we can read the length\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] scp: Uploading packer-provisioner-ansible-local761816790: perms=C0644 size=9\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] scp stderr (length 56): Sink: C0644 9 packer-provisioner-ansible-local761816790\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/aws.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/packer-provisioner-ansible-local761816790[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/aws.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/packer-provisioner-ansible-local761816790[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 packer: 2018/08/29 13:34:15 [DEBUG] starting remote command: cd /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/aws.yaml --extra-vars "packer_build_name=aws-ext-il2 packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b87004d-de0c-d21b-2ed5-4496d5d359eb/packer-provisioner-ansible-local761816790\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2: PLAY [AWS Cloud Provisioning] **************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: PLAY [AWS Cloud Provisioning] **************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Install AWS tools from yum] **********************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:15 ui: [0;32m    aws-ext-il2: TASK [Install AWS tools from yum] **********************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:26 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'python-pip', u'python-setuptools', u'zip', u'unzip', u'bzip2', u'gcc', u'python-devel', u'cloud-init'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=[u'python-pip', u'python-setuptools', u'zip', u'unzip', u'bzip2', u'gcc', u'python-devel', u'cloud-init'])[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:26 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:26 ui: [0;32m    aws-ext-il2: TASK [Upgrade Base pip Packages] ***********************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Upgrade Base pip Packages] ***********************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=six)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:27 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=six)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:28 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=pyudev)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=pyudev)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:30 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=requests)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=requests)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:30 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Install AWS tools from pip] **********************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:30 ui: [0;32m    aws-ext-il2: TASK [Install AWS tools from pip] **********************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:35 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=cfn-tools)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=cfn-tools)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:36 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=pystache)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=pystache)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=argparse)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:37 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=argparse)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:41 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=python-daemon)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=python-daemon)[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=awscli)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:45 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1] => (item=awscli)[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:45 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Upload CloudFormation Init Script] ***************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:45 ui: [0;32m    aws-ext-il2: TASK [Upload CloudFormation Init Script] ***************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:46 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:46 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Run CloudFormation Setup Script] *****************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:46 ui: [0;32m    aws-ext-il2: TASK [Run CloudFormation Setup Script] *****************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [1;35m [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [1;35m [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [1;35mthan running sudo[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [1;35mthan running sudo[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [1;35m[0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [1;35m[0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: TASK [Remove extra network restart on rc.local] ********************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: TASK [Remove extra network restart on rc.local] ********************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33mchanged: [127.0.0.1][0m[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: PLAY RECAP *********************************************************************[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: PLAY RECAP *********************************************************************[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: [0;33m127.0.0.1[0m                  : [0;32mok=6   [0m [0;33mchanged=6   [0m unreachable=0    failed=0[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: [0;33m127.0.0.1[0m                  : [0;32mok=6   [0m [0;33mchanged=6   [0m unreachable=0    failed=0[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2:[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] 1418 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] 131 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] 1418 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] 131 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] (telemetry) ending ansible-local\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] (telemetry) Starting provisioner shell\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Provisioning with shell script: ./scripts/cleanup.sh[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [1;32m==> aws-ext-il2: Provisioning with shell script: ./scripts/cleanup.sh[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 Opening ./scripts/cleanup.sh for reading\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] 884 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] 884 bytes written for 'uploadData'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Starting remote scp process:  scp -vt /tmp\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Started SCP session, beginning transfers...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] scp: Uploading script_3318.sh: perms=C0644 size=884\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] SCP session complete, closing stdin pipe.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Waiting for SSH session to complete.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] scp stderr (length 31): Sink: C0644 884 script_3318.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] starting remote command: chmod 0755 /tmp/script_3318.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] starting remote command: sudo /tmp/script_3318.sh\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Pausing for 0 seconds...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Pausing for 0 seconds...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Cleaning up yum cache[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Cleaning up yum cache[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + CLEANUP_PAUSE=0[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + CLEANUP_PAUSE=0[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Pausing for 0 seconds...'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Pausing for 0 seconds...'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + sleep 0[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + sleep 0[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Cleaning up yum cache'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Cleaning up yum cache'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /usr/bin/yum clean all[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /usr/bin/yum clean all[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Loaded plugins: fastestmirror, langpacks, priorities[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Loaded plugins: fastestmirror, langpacks, priorities[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Cleaning repos: base epel extras updates[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Cleaning repos: base epel extras updates[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Cleaning up everything[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Cleaning up everything[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Cleaning up list of fastest mirrors[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Cleaning up list of fastest mirrors[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Force logs to rotate[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Force logs to rotate[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Force logs to rotate'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Force logs to rotate'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /usr/sbin/logrotate -f /etc/logrotate.conf[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /usr/sbin/logrotate -f /etc/logrotate.conf[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -f /var/log/boot.log-20180829 /var/log/btmp-20180829 /var/log/cloud-init.log /var/log/cron-20180829 /var/log/maillog-20180829 /var/log/messages-20180829 /var/log/secure-20180829 /var/log/spooler-20180829 /var/log/wtmp-20180829 /var/log/yum.log-20180829 '/var/log/*.gz'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -f /var/log/boot.log-20180829 /var/log/btmp-20180829 /var/log/cloud-init.log /var/log/cron-20180829 /var/log/maillog-20180829 /var/log/messages-20180829 /var/log/secure-20180829 /var/log/spooler-20180829 /var/log/wtmp-20180829 /var/log/yum.log-20180829 '/var/log/*.gz'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Clear audit log and wtmp[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Clear audit log and wtmp[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Clear audit log and wtmp'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Clear audit log and wtmp'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/cat /dev/null[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/cat /dev/null[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/cat /dev/null[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/cat /dev/null[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Cleaning up udev rules'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Cleaning up udev rules'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -f /etc/udev/rules.d/70-persistent-ipoib.rules[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -f /etc/udev/rules.d/70-persistent-ipoib.rules[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Cleaning up tmp'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Cleaning up tmp'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Cleaning up udev rules[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Cleaning up udev rules[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -rf /tmp/aws-cfn-bootstrap.sh /tmp/packer-provisioner-ansible-local /tmp/script_3318.sh[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -rf /tmp/aws-cfn-bootstrap.sh /tmp/packer-provisioner-ansible-local /tmp/script_3318.sh[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Cleaning up tmp[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Cleaning up tmp[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -rf /var/tmp/abrt[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -rf /var/tmp/abrt[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Remove the SSH host keys'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Remove the SSH host keys'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -f /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_dsa_key.pub /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ecdsa_key.pub /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -f /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_dsa_key.pub /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ecdsa_key.pub /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Remove the SSH host keys[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Remove the SSH host keys[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Remove the root user\'92s shell history[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Remove the root user\'92s shell history[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> yum -y clean all[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> yum -y clean all[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Remove the root user\'92s shell history'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Remove the root user\'92s shell history'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + /bin/rm -f /root/.bash_history[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + /bin/rm -f /root/.bash_history[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + unset HISTFILE[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + unset HISTFILE[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> yum -y clean all'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> yum -y clean all'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + yum -y clean all[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + yum -y clean all[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Loaded plugins: fastestmirror, langpacks, priorities[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Loaded plugins: fastestmirror, langpacks, priorities[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Cleaning repos: base epel extras updates[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Cleaning repos: base epel extras updates[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Cleaning up everything[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Cleaning up everything[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + rm -rf /var/cache/yum[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + rm -rf /var/cache/yum[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + echo '==> Reset cloud-init userdata'[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + echo '==> Reset cloud-init userdata'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: ==> Reset cloud-init userdata[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: ==> Reset cloud-init userdata[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: + rm -rf /var/lib/cloud/data /var/lib/cloud/handlers /var/lib/cloud/instance /var/lib/cloud/instances /var/lib/cloud/scripts /var/lib/cloud/seed /var/lib/cloud/sem[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: + rm -rf /var/lib/cloud/data /var/lib/cloud/handlers /var/lib/cloud/instance /var/lib/cloud/instances /var/lib/cloud/scripts /var/lib/cloud/seed /var/lib/cloud/sem[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] 779 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] 1477 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] 779 bytes written for 'stdout'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] 1477 bytes written for 'stderr'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] Opening new ssh session\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [DEBUG] starting remote command: rm -f /tmp/script_3318.sh\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] RPC endpoint: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 packer: 2018/08/29 13:34:48 [INFO] RPC client: Communicator ended with: 0\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 [INFO] (telemetry) ending shell\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [1;32m==> aws-ext-il2: Stopping the source instance...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Stopping the source instance...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:48 ui: [0;32m    aws-ext-il2: Stopping instance, attempt 1[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: Stopping instance, attempt 1[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Waiting for the instance to stop...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:34:49 ui: [1;32m==> aws-ext-il2: Waiting for the instance to stop...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 ui: [1;32m==> aws-ext-il2: Creating the AMI: csod-centos7-v2.2.73-test[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Creating the AMI: csod-centos7-v2.2.73-test[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 ui: [0;32m    aws-ext-il2: AMI: ami-099dbd6de987db425[0m\
+[BETA: CentOS7-AWS-il2] [0;32m    aws-ext-il2: AMI: ami-099dbd6de987db425[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 ui: [1;32m==> aws-ext-il2: Waiting for AMI to become ready...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Waiting for AMI to become ready...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 packer: 2018/08/29 13:35:19 Waiting for state to become: available\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 packer: 2018/08/29 13:35:19 Using 2s as polling delay (change with AWS_POLL_DELAY_SECONDS)\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:35:19 packer: 2018/08/29 13:35:19 Allowing 300s to complete (change with AWS_TIMEOUT_SECONDS)\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Creating Encrypted AMI Copy[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:02 ui: [1;32m==> aws-ext-il2: Creating Encrypted AMI Copy[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:02 ui: [1;32m==> aws-ext-il2: Copying AMI: us-west-2(ami-099dbd6de987db425)[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Copying AMI: us-west-2(ami-099dbd6de987db425)[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:02 ui: [1;32m==> aws-ext-il2: Encrypting with KMS Key ID: arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Encrypting with KMS Key ID: arn:aws:kms:us-west-2:882016564815:key/be91ec52-a7ed-4b6b-b8cd-d6594f71a044[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:03 ui: [1;32m==> aws-ext-il2: Waiting for AMI copy to become ready...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Waiting for AMI copy to become ready...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:03 packer: 2018/08/29 13:38:03 Waiting for state to become: available\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:03 packer: 2018/08/29 13:38:03 Using 2s as polling delay (change with AWS_POLL_DELAY_SECONDS)\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:03 packer: 2018/08/29 13:38:03 Allowing 300s to complete (change with AWS_TIMEOUT_SECONDS)\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 ui error: [1;31m==> aws-ext-il2: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'[0m\
+[BETA: CentOS7-AWS-il2] [1;31m==> aws-ext-il2: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 ui: [1;32m==> aws-ext-il2: Deregistering the AMI because cancellation or error...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Deregistering the AMI because cancellation or error...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 ui: [1;32m==> aws-ext-il2: Terminating the source AWS instance...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Terminating the source AWS instance...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 packer: 2018/08/29 13:38:24 Waiting for state to become: terminated\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 packer: 2018/08/29 13:38:24 Using 2s as polling delay (change with AWS_POLL_DELAY_SECONDS)\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:24 packer: 2018/08/29 13:38:24 Allowing 300s to complete (change with AWS_TIMEOUT_SECONDS)\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Cleaning up any extra volumes...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:30 ui: [1;32m==> aws-ext-il2: Cleaning up any extra volumes...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:30 ui: [1;32m==> aws-ext-il2: No volumes to clean up, skipping[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: No volumes to clean up, skipping[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Deleting temporary security group...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:30 ui: [1;32m==> aws-ext-il2: Deleting temporary security group...[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:30 ui: [1;32m==> aws-ext-il2: Deleting temporary keypair...[0m\
+[BETA: CentOS7-AWS-il2] [1;32m==> aws-ext-il2: Deleting temporary keypair...[0m\
+[BETA: CentOS7-AWS-il2] [1;31mBuild 'aws-ext-il2' errored: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'[0m\
+[BETA: CentOS7-AWS-il2] \
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 [INFO] (telemetry) ending amazon-ebs\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 ui error: [1;31mBuild 'aws-ext-il2' errored: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'[0m\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 Builds completed. Waiting on interrupt barrier...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 machine readable: error-count []string\{"1"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 ui error: \
+[BETA: CentOS7-AWS-il2] ==> Some builds didn't complete successfully and had errors:\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 machine readable: aws-ext-il2,error []string\{"Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'"\}\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 ui error: --> aws-ext-il2: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 ui: \
+[BETA: CentOS7-AWS-il2] ==> Builds finished but no artifacts were created.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 [INFO] (telemetry) Finalizing.\
+[BETA: CentOS7-AWS-il2] ==> Some builds didn't complete successfully and had errors:\
+[BETA: CentOS7-AWS-il2] --> aws-ext-il2: Error waiting for AMI Copy: unexpected state 'failed', wanted target 'available'\
+[BETA: CentOS7-AWS-il2] \
+[BETA: CentOS7-AWS-il2] ==> Builds finished but no artifacts were created.\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 waiting for all plugin processes to complete...\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 /usr/bin/packer: plugin process exited\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 /usr/bin/packer: plugin process exited\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 /usr/bin/packer: plugin process exited\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 /usr/bin/packer: plugin process exited\
+[BETA: CentOS7-AWS-il2] 2018/08/29 13:38:31 /usr/bin/packer: plugin process exited\
+\cf5 \strokec5 [Pipeline] [BETA: CentOS7-AWS-il2] \}\
+[Pipeline] [BETA: CentOS7-AWS-il2] // withCredentials\
+[Pipeline] [BETA: CentOS7-AWS-il2] \}\
+[Pipeline] [BETA: CentOS7-AWS-il2] // withEnv\
+[Pipeline] [BETA: CentOS7-AWS-il2] \}\
+[Pipeline] [BETA: CentOS7-AWS-il2] // node\
+[Pipeline] [BETA: CentOS7-AWS-il2] \}\
+[Pipeline] [BETA: CentOS7-AWS-il2] // stage\
+[Pipeline] [BETA: CentOS7-AWS-il2] \}\
+\cf2 \strokec2 [BETA: CentOS7-AWS-il2] Failed in branch BETA: CentOS7-AWS-il2\
+\cf5 \strokec5 [Pipeline] // parallel\
+[Pipeline] \}\
+[Pipeline] // stage\
+[Pipeline] stage\
+[Pipeline] \{ (BETA Build Successful)\
+\cf2 \strokec2 Stage 'BETA Build Successful' skipped due to earlier failure(s)\
+\cf5 \strokec5 [Pipeline] \}\
+[Pipeline] // stage\
+[Pipeline] stage\
+[Pipeline] \{ (Manual Verification)\
+\cf2 \strokec2 Stage 'Manual Verification' skipped due to earlier failure(s)\
+\cf5 \strokec5 [Pipeline] \}\
+[Pipeline] // stage\
+[Pipeline] stage\
+[Pipeline] \{ (Declarative: Post Actions)\
+[Pipeline] script\
+[Pipeline] \{\
+[Pipeline] notifyBitbucket\
+\cf2 \strokec2 Notifying Stash at "{\field{\*\fldinst{HYPERLINK "https://bitbucket.csod.com/"}}{\fldrslt \cf4 \strokec4 bitbuckt_xxxxxx.com}}"\
+Notified Stash for commit with id 1f39faa40c55d26c48c880938b1642aed4042ba9\
+\cf5 \strokec5 [Pipeline] \}\
+[Pipeline] // script\
+[Pipeline] hipchatSend\
+\cf2 \strokec2 [INFO] HipChat notification sent to the following rooms: Jenkins\
+\cf5 \strokec5 [Pipeline] \}\
+[Pipeline] // stage\
+[Pipeline] \}\
+[Pipeline] // withEnv\
+[Pipeline] \}\
+[Pipeline] // node\
+[Pipeline] End of Pipeline\
+\cf2 \strokec2 [BFA] Scanning build for known causes...\
+[BFA] No failure causes found\
+[BFA] Done. 0s\
+ERROR: script returned exit code 1\
+Finished: FAILURE\
+}

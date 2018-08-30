@@ -1,0 +1,1972 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red242\green242\blue242;\red100\green100\blue100;
+\red103\green164\blue42;\red52\green52\blue52;\red241\green150\blue28;\red172\green0\blue218;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c96078\c96078\c96078;\cssrgb\c46667\c46667\c46667;
+\cssrgb\c47059\c69020\c21569;\cssrgb\c26667\c26667\c26667;\cssrgb\c96078\c65098\c13725;\cssrgb\c74118\c5882\c88235;}
+\margl1440\margr1440\vieww37900\viewh19880\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f0\fs28\fsmilli14400 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 \
+[Packer-Build-CentOS7] Running shell script\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 aws-ext output will be in this color.\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2  \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Prevalidating AMI Name: XXX00000-centos7-v2.2.63\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Found Image ID: ami-13071c73\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating temporary keypair: packer_5b85dcc8-487b-d620-65e9-23c27c40246a\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb6 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \cb1 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating temporary security group for this instance: packer_5b85dcca-7ca3-79a2-0e12-c49a7c9b14ff\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Authorizing access to port 22 from 0.0.0.0/0 in the temporary security group...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Launching a source AWS instance...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to source instance\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Name": "Packer Builder"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Instance ID: i-083bff6db553a5241\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Waiting for instance (i-083bff6db553a5241) to become ready...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Waiting for SSH to become available...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Connected to SSH!\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Provisioning with Ansible...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading Playbook directory to Ansible staging directory...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Creating directory: /tmp/packer-provisioner-ansible-local/5b85dcc8-8500-869e-4952-e531e9cf1a07\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading main Playbook file...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading inventory file...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b85dcc8-8500-869e-4952-e531e9cf1a07 && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b85dcc8-8500-869e-4952-e531e9cf1a07/centos7.yaml --extra-vars "packer_build_name=aws-ext packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b85dcc8-8500-869e-4952-e531e9cf1a07/packer-provisioner-ansible-local514213004\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: PLAY [Packer Provisoner for XXX00000-centos7 images] *******************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Install epel-release] ****************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Install yum-priorities] **************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Disable selinux] *********************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ok: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Install XXX00000 Standard Base Utilities] ************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=[u'yum-utils', u'vim-enhanced', u'telnet', u'net-tools', u'traceroute', u'iotop', u'system-storage-manager', u'sysstat', u'atop', u'htop', u'iptraf-ng', u'mtr', u'wget', u'nfs-utils', u'bind-utils', u'nc', u'dbus', u'nmap', u'aide'])\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Uninstall Non-Standard Packages] *****************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=[u'firewalld'])\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Run aide-init] ***********************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Update all Yum Packages] *************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: PLAY RECAP *********************************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 127.0.0.1\strokec3                   : \strokec5 ok=7   \strokec3  \strokec7 changed=6   \strokec3  unreachable=0    failed=0\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Provisioning with Ansible...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading Playbook directory to Ansible staging directory...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Creating directory: /tmp/packer-provisioner-ansible-local/5b85dcc8-818d-8844-92e0-505a61cf4bbf\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading main Playbook file...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Uploading inventory file...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5b85dcc8-818d-8844-92e0-505a61cf4bbf && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5b85dcc8-818d-8844-92e0-505a61cf4bbf/aws.yaml --extra-vars "packer_build_name=aws-ext packer_builder_type=amazon-ebs packer_http_addr="  -c local -i /tmp/packer-provisioner-ansible-local/5b85dcc8-818d-8844-92e0-505a61cf4bbf/packer-provisioner-ansible-local890753746\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: PLAY [AWS Cloud Provisioning] **************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Install AWS tools from yum] **********************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=[u'python-pip', u'python-setuptools', u'zip', u'unzip', u'bzip2', u'gcc', u'python-devel', u'cloud-init'])\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Upgrade Base pip Packages] ***********************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=six)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=pyudev)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=requests)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Install AWS tools from pip] **********************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=cfn-tools)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=pystache)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=argparse)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=python-daemon)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1] => (item=awscli)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Upload CloudFormation Init Script] ***************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Run CloudFormation Setup Script] *****************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec8  [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec8 than running sudo\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: TASK [Remove extra network restart on rc.local] ********************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 changed: [127.0.0.1]\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: PLAY RECAP *********************************************************************\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: \strokec7 127.0.0.1\strokec3                   : \strokec5 ok=6   \strokec3  \strokec7 changed=6   \strokec3  unreachable=0    failed=0\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext:\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Provisioning with shell script: ./scripts/cleanup.sh\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + CLEANUP_PAUSE=0\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Pausing for 0 seconds...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Pausing for 0 seconds...'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Cleaning up yum cache\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + sleep 0\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Cleaning up yum cache'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /usr/bin/yum clean all\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Loaded plugins: fastestmirror, langpacks, priorities\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Cleaning repos: base epel extras updates\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Cleaning up everything\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Cleaning up list of fastest mirrors\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Force logs to rotate'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /usr/sbin/logrotate -f /etc/logrotate.conf\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Force logs to rotate\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -f /var/log/boot.log-20180828 /var/log/btmp-20180828 /var/log/cloud-init.log /var/log/cron-20180828 /var/log/maillog-20180828 /var/log/messages-20180828 /var/log/secure-20180828 /var/log/spooler-20180828 /var/log/wtmp-20180828 /var/log/yum.log-20180828 '/var/log/*.gz'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Clear audit log and wtmp'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/cat /dev/null\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/cat /dev/null\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Clear audit log and wtmp\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Cleaning up udev rules'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -f /etc/udev/rules.d/70-persistent-ipoib.rules\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Cleaning up tmp'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -rf /tmp/aws-cfn-bootstrap.sh /tmp/packer-provisioner-ansible-local /tmp/script_7747.sh\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Cleaning up udev rules\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Cleaning up tmp\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Remove the SSH host keys\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -rf /var/tmp/abrt\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Remove the SSH host keys'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -f /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_dsa_key.pub /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ecdsa_key.pub /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Remove the root user\'92s shell history\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Remove the root user\'92s shell history'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> yum -y clean all\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + /bin/rm -f /root/.bash_history\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + unset HISTFILE\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> yum -y clean all'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + yum -y clean all\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Loaded plugins: fastestmirror, langpacks, priorities\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Cleaning repos: base epel extras updates\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Cleaning up everything\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + rm -rf /var/cache/yum\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: ==> Reset cloud-init userdata\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + echo '==> Reset cloud-init userdata'\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: + rm -rf /var/lib/cloud/data /var/lib/cloud/handlers /var/lib/cloud/instance /var/lib/cloud/instances /var/lib/cloud/scripts /var/lib/cloud/seed /var/lib/cloud/sem\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Stopping the source instance...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Stopping instance, attempt 1\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Waiting for the instance to stop...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating the AMI: XXX00000-centos7-v2.2.63\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: AMI: ami-0467cae93913c0e7f\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Waiting for AMI to become ready...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating Encrypted AMI Copy\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Copying AMI: us-west-1(ami-0467cae93913c0e7f)\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Encrypting with KMS Key ID: arn:aws:kms:us-west-1:249708023239:key/ca0863bb-c06f-4402-87c9-e6e80cca2268\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Waiting for AMI copy to become ready...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Deregistering unencrypted AMI\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Deleting unencrypted snapshots\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Deleting Snapshot ID: snap-0a894934af73da1cc\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Deleting Snapshot ID: snap-0ef11ae2eaae639cc\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Copying AMI (ami-0eacabb1fe9efb635) to other regions...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Copying to: us-east-1\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Copying to: eu-west-2\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Copying to: eu-central-1\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Copying to: eu-west-3\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Waiting for all copies to complete...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on AMI (ami-05fe1e205c72fe431)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Modifying: description\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on AMI (ami-0cb745b2a35d84cd6)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Modifying: description\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on AMI (ami-0ee3f13b803ddb3d2)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Modifying: description\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on AMI (ami-0eacabb1fe9efb635)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Modifying: description\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on AMI (ami-0705650dfc3823226)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Modifying: description\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0f9bf7b81b2de1ed5)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0910ed137e06e476b)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-06cc523267b0588e0)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-080f6abbf9089f8fd)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-053cc87a24cc91259)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0b1fc3cf774d2595e)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0023138aca20232e5)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0f1ae4c595e488361)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0fa7d7362d117e1b2)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Modifying attributes on snapshot (snap-0be7ef954d0540cfa)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to AMI (ami-0eacabb1fe9efb635)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-053cc87a24cc91259\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0b1fc3cf774d2595e\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating AMI tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "APP_DOMAIN": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "OS": "CentOS 7.X"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Type": "Latest"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Version": "2.2.63"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Application": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Environment": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "XXX00000_APP": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating snapshot tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to AMI (ami-0705650dfc3823226)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0023138aca20232e5\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0f1ae4c595e488361\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating AMI tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "XXX00000_APP": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "APP_DOMAIN": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "OS": "CentOS 7.X"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Type": "Latest"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Version": "2.2.63"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Application": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Environment": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating snapshot tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to AMI (ami-05fe1e205c72fe431)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0fa7d7362d117e1b2\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0be7ef954d0540cfa\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating AMI tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Type": "Latest"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Version": "2.2.63"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Application": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Environment": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "XXX00000_APP": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "APP_DOMAIN": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "OS": "CentOS 7.X"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating snapshot tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to AMI (ami-0cb745b2a35d84cd6)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0f9bf7b81b2de1ed5\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-0910ed137e06e476b\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating AMI tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Application": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Environment": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "XXX00000_APP": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "APP_DOMAIN": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "OS": "CentOS 7.X"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Type": "Latest"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Version": "2.2.63"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating snapshot tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Adding tags to AMI (ami-0ee3f13b803ddb3d2)...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-06cc523267b0588e0\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Tagging snapshot: snap-080f6abbf9089f8fd\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating AMI tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Type": "Latest"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Version": "2.2.63"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Application": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "Environment": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "XXX00000_APP": "XXX00000"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "APP_DOMAIN": "INFRASTRUCTURE"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5     aws-ext: Adding tag: "OS": "CentOS 7.X"\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Creating snapshot tags\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Terminating the source AWS instance...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Cleaning up any extra volumes...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: No volumes to clean up, skipping\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Deleting temporary security group...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 ==> aws-ext: Deleting temporary keypair...\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec5 Build 'aws-ext' finished.\strokec3 \
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\
+\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 ==> Builds finished. The artifacts of successful builds are:\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 --> aws-ext: AMIs were created:\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 eu-central-1: ami-05fe1e205c72fe431\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 eu-west-2: ami-0ee3f13b803ddb3d2\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 eu-west-3: ami-0cb745b2a35d84cd6\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 us-east-1: ami-0705650dfc3823226\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\qr\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \strokec3 us-west-1: ami-0eacabb1fe9efb635\
+\pard\pardeftab720\sl320\sa288\partightenfactor0
+\cf2 \
+}
